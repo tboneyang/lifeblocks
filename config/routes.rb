@@ -1,12 +1,21 @@
 SchoolNews::Application.routes.draw do
-  get "welcome/index"
+  root "static_pages#home"
+  match '/help', to: "static_pages#help", via: 'get'
+  match '/contact', to: "static_pages#contact", via: 'get'
+  match '/about', to: "static_pages#about", via: 'get'
+  match '/stack', to: "blocks#index", via: 'get'
+
+  resources :blocks do
+     resources :comments
+   end
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-      root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,9 +25,6 @@ SchoolNews::Application.routes.draw do
 
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-     resources :blocks do
-        resources :comments
-      end
 
 
   # Example resource route with options:

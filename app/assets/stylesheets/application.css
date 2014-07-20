@@ -11,3 +11,34 @@
  *= require_self
  *= require_tree .
  */
+header {
+	background: #cff;
+	color: green;
+	border: 5px solid green;
+}
+
+.center {
+	text-align: center;
+}
+
+h4 {
+	font-size: 60px;
+}
+
+nav {
+	word-spacing:50px;
+	font-size: 30px
+}
+	
+
+h1 {
+	border: 3px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+
+
+span {
+	border: 3px solid #c93;
+}
+
