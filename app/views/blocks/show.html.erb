@@ -1,0 +1,20 @@
+<!-- display title and text-->
+<p>
+	<strong>Title:</strong>
+	<%= @block.title %>
+</p>
+
+<p>
+	<strong>Text:</strong>
+	<%= @block.text %>
+</p>
+
+<h2> Comments </h>
+<%= render @block.comments %>
+
+<h2>Add a Comment:</h2>
+<%= render "comments/form" %>
+		
+
+<%= link_to 'Back', blocks_path %> |
+<%= link_to 'Edit', edit_block_path(@block) %>

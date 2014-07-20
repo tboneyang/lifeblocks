@@ -1,0 +1,28 @@
+<%= form_for @block do |b| %>
+	<% if @block.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@block.errors.count, "error") %> prohibited this block from being saved:</h2>
+		<ul>
+		<% @block.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<%end%>
+	<p>
+		<%= b.label :title %><br>
+		<%= b.text_field :title %>
+	</p>
+
+	<p>
+		<%= b.label :text %><br>
+		<%= b.text_area :text %>
+	</p>
+
+	<p>
+		<%= b.submit %>
+	</p>
+
+<% end %>
+
+
