@@ -13,7 +13,7 @@ class BlocksController < ApplicationController
 		@block = Block.new(block_params)
 
 		if @block.save
-			redirect_to @block
+			redirect_to blocks_path
 		else
 			render 'new'
 		end
@@ -33,7 +33,7 @@ class BlocksController < ApplicationController
 		@block = Block.find(params[:id])
 
 		if @block.update(block_params)
-			redirect_to @block
+			redirect_to blocks_path
 		else
 			render 'edit'
 		end
@@ -41,7 +41,11 @@ class BlocksController < ApplicationController
 
 #creates listing of blocks
 	def index
-		@blocks = Block.all
+		if params[:tag]
+			@blocks = Block.tagged_with(params[:tag])
+		else
+			@blocks = Block.all
+		end
 	end
 
 #edits existing blocks
@@ -57,7 +61,7 @@ class BlocksController < ApplicationController
 #defines strong block parameters so only appropriate data is passed
 	private
 		def block_params
-			params.require(:block).permit(:title, :text)
+			params.require(:block).permit(:title, :text, :tag_list)
 		end
 
 end

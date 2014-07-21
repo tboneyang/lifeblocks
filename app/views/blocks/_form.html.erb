@@ -15,6 +15,10 @@
 	</p>
 
 	<p>
+		<%= b.label :tags %><br>
+		<%= b.text_field :tag_list, { :placeholder => "Tags separated by commas" } %>
+
+	<p>
 		<%= b.label :text %><br>
 		<%= b.text_area :text %>
 	</p>

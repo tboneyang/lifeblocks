@@ -1,24 +1,30 @@
-<h1>Tom's Block Stack</h1>
+<h1>Club 3rd's Block <%= link_to 'Stack []', blocks_path %>   |  <%= link_to 'Add New Block', new_block_path %>
+	<br>
 
-<%= link_to 'Home', root_path %>
 
-<%= link_to 'New Block', new_block_path %>
+	<div id='tag_cloud'>
+		<% tag_cloud Block.tag_counts, %w[s m l] do |tag, css_class| %>
+			<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+		<% end %>
+	</div>
 
-<!--display all blocks-->
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Text</th>
-		<th colspan="3"></th>
-	</tr>
+</h1>
+
+<br>
+<br>
 
 <% @blocks.each do |block| %>
-	<tr>
-		<td><%= block.title %></td>
-		<td><%= block.text %></td>
-		<td><%= link_to 'Show', block_path(block) %></td>
-		<td><%= link_to 'Edit', edit_block_path(block) %></td>
-		<td><%= link_to 'Delete', block_path(block), method: :delete, data: { confirm: 'You sure Bro?'} %></td>
-	<tr>
+	<span>
+		<div id="block">
+			<p class="center">
+			<%= link_to block.title, block_path(block) %>
+			</p>
+			<p id="tags">
+				<%= raw block.tag_list.map { |t| link_to t, tag_path(t) }.join('     ') %>
+			</p>
+		</div>
+	</span>
+	<br>
 <% end %>
-</table>
+<br>
+

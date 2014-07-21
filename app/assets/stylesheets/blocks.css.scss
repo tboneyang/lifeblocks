@@ -2,7 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-span {
-	border: 3px solid #c93;
-	padding: 20px;
+#block {
+	background-color: #cf9;
+	width:600px;
+	height:100px;
+	color:white;
+	border: 5px solid #333;
+	font-size: 25px;
+
+}
+
+
+
+#tag_cloud {
+	.s { font-size: 0.8em;}
+	.m { font-size: 1.2em;}
+	.l { font-size: 1.8em;}
+}
+
+#tags {
+font-size:20px;
 }

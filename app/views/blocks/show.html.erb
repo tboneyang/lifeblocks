@@ -7,6 +7,9 @@
 
 		<strong>Text:</strong>
 		<%= @block.text %>
+		
+		<strong>Tags:</strong>
+		<%= @block.tag_list %>
 
 </span>
 
@@ -18,4 +21,5 @@
 		
 
 <%= link_to 'Back', blocks_path %> |
-<%= link_to 'Edit', edit_block_path(@block) %>
+<%= link_to 'Edit', edit_block_path(@block) %> |
+<%= link_to 'Delete', @block, :method => :delete, data: {confirm: 'You Sure Bro?'}  %>
