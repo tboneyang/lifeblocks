@@ -1,3 +1,83 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#ddbuttons{
+	float:right;
+	width:400px;
+}
+
+#ddbutton a{
+	display: block;
+	height:70px;
+	width:200px;
+	overflow:hidden;
+	text-decoration:none;
+	-webkit-border-radius: 10px;
+	-moz-border-rdaius: 10px;
+	text-align: center;
+	border: 2px solid white;
+	margin-bottom: 4px;
+}
+
+#ddbutton h6{
+	
+	color:#FFF;
+	margin:0px;
+	padding:0px;
+	font: 2em/60px 'Myriad Pro', Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+#container{
+	padding:20px;
+	background-image:url(/assets/snowhiking.jpg);
+	opacity:0.6;
+	height: 80%;
+	width:90%;
+	left:4%;
+	background-size:cover;
+	overflow:hidden;
+	position:absolute;
+}
+
+#middlecontainer{
+	margin-top:5%;
+	height: 50%;
+}
+
+.name{
+	font-size:30px;
+	text-align:center;
+	padding:10px;
+}
+.wedged{
+	margin-top:8%;
+	width:25%;
+	margin-left:37%;
+}
+
+.resume{
+	padding:15px;	
+	font-size:20px;
+}
+
+.title{
+	margin-top:40px;
+	font-size: 30px;
+}
+
+.vert{
+	text-align:right;
+	margin-top: 450px;
+	font-size: 40px;
+	
+}
+
+.spacing{
+	word-spacing:20px;
+}
+
+.visible{
+	font-size:28px;
+}

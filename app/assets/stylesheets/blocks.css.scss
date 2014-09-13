@@ -3,23 +3,37 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #block {
-	background-color: #cf9;
-	width:600px;
+	background-color: #dfd;
+	width:450px;
 	height:100px;
-	color:white;
-	border: 5px solid #333;
+	color: white;
+	border: 5px solid green;
+	border-radius: 5px;
 	font-size: 25px;
+	padding: 10px;
 
 }
+#blockheader{
+	font-size:20px;
+}
 
+#padded {
+	padding:60px;
+}
 
+#extrapadded{
+	padding:100px;
+}
+
+#reqs {
+	font-size:20px;
+}
 
 #tag_cloud {
+	font-size:25px;
 	.s { font-size: 0.8em;}
 	.m { font-size: 1.2em;}
 	.l { font-size: 1.8em;}
+
 }
 
-#tags {
-font-size:20px;
-}

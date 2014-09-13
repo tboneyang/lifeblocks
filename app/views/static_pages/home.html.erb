@@ -1,3 +1,13 @@
-<h1>Welcome To LIFEBLOCKS</h1>
-<p> Check out Club 3rd's Existing <%= link_to 'Stack []', blocks_path %> ! </p>
+<div class="center wedged">
+<h3 >Sort, Navigate, and Conquer</h3>
 
+<h4>
+<%= link_to"RPI Undergraduate Bucket List 2011-2015", blocks_path%>
+<span id="content"><%= image_tag("rpi.jpg")%></span>
+<div id='tag_cloud'>
+	<% tag_cloud Block.tag_counts, %w[s m l] do |tag, css_class| %>
+		<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+	<% end %>
+</div>
+</h4>
+</div>

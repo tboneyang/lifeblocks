@@ -39,10 +39,19 @@ class BlocksController < ApplicationController
 		end
 	end
 
-#creates listing of blocks
+#Lists blocks by tags
 	def index
 		if params[:tag]
 			@blocks = Block.tagged_with(params[:tag])
+		else
+			@blocks = Block.all
+		end
+	end
+
+#Lists blocks by reqs
+	def reqindex
+		if params[:req]
+			@blocks = Block.tagged_with(params[:req])
 		else
 			@blocks = Block.all
 		end
@@ -61,7 +70,7 @@ class BlocksController < ApplicationController
 #defines strong block parameters so only appropriate data is passed
 	private
 		def block_params
-			params.require(:block).permit(:title, :text, :tag_list)
+			params.require(:block).permit(:title, :text, :tag_list, :req_list, :todo)
 		end
 
 end

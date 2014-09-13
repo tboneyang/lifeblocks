@@ -11,50 +11,133 @@
  *= require_self
  *= require_tree .
  */
-html, body {
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+html, 
+body {
+	margin:0;
+	padding:0;
 	height: 100%;
+	width: 100%;
+	font-family:Roboto;
 }
 
-
-#container {
+#wrapper {
+	position: relative;
 	min-height: 100%;
-	margin-bottom: -100px;
-	position:relative;
+}
+
+#header{
+	height: 80px;
+	background: #dfd;
+}
+
+#content{
+	padding-bottom: 0px;
 }
 
 #footer{
-height: 100px;
-position:relative;
-word-spacing:50px;
+	width:100%;
+	height: 80px;
+	background: #dfd;
+	position:absolute;
+	bottom:0px;
+	left:0px;
 }
 
-.clearfooter {
-	height: 100px;
-	clear: both;
+
+
+.headerlinks{
+	font-size:30px;
+	float:right;
+	word-spacing: 10px;
+	margin-top: 40px;
+	margin-right: 20px;
+}
+
+.sunken{
+	text-shadow: 2px 2px 0px rgba(256,256,256,0.8);
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgba(11,156,49,0.5);
+	-webkit-transition: 200ms linear 0s;
+	-moz-transition: 200ms linear 0s;
+	-o-transition: 200ms linear 0s;
+	transition: 200ms linear 0s;
 }
 
 
-header {
-	font-size:60px;
+a.sunken:hover, a.sunken:focus{
+	text-shadow: -2px 0px 0px rgba(11,156,49,1);
 }
 
-#theme {
-	background: #cff;
-	color: green;
-	border: 5px solid green;
+
+.block{
+	background: #bdefcb; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #bdefcb 0%, #a0ffa0 0%, #ddffdd 99%, #ddffdd 99%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#bdefcb), color-stop(0%,#a0ffa0), color-stop(99%,#ddffdd), color-stop(99%,#ddffdd)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #bdefcb 0%,#a0ffa0 0%,#ddffdd 99%,#ddffdd 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #bdefcb 0%,#a0ffa0 0%,#ddffdd 99%,#ddffdd 99%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #bdefcb 0%,#a0ffa0 0%,#ddffdd 99%,#ddffdd 99%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #bdefcb 0%,#a0ffa0 0%,#ddffdd 99%,#ddffdd 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdefcb', endColorstr='#ddffdd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	rogid:DXImageTransform.Microsoft.gradient( startColorstr='#bdefcb', endColorstr='#ddffdd',GradientType=0 ); /* IE6-9 */
+
+}
+
+.center{
+	text-align:center;
+}
+
+.contactbutton{
+
+}
+
+.clip-circle{
+	margin-left: 43%;
+	background-image:url(/assets/contact.png);
+	border-radius:50%;
+	background-size:220px 220px;
+ 	background-position:10px 0px;
+	height:220px;
+	width:220px;
+	border-radius:50%;
+	overflow:hidden;
+	border:5px solid white;
 }
 
 .center {
 	text-align: center;
+}	
+
+.logo {
+	font-size: 70px;
 }
 
 
-nav {
-	font-size: 30px
+.titleband{
+	background:#ddd;
 }
-	
-h1 {
-	border: 3px solid #ccc;
-	padding: 10px;
-	color: #333;
+
+.tdtitle{
+	font-size:40px;
+	margin-left:200px;
 }
+
+.ctitle{
+	font-size:40px;
+	float:right;
+	margin-right:200px;
+}
+
+
+.greenborder{
+	border:3px solid green;
+	border-radius:10px;
+	padding:5px;
+}
+
+
+
+
+

@@ -9,6 +9,7 @@ SchoolNews::Application.routes.draw do
      resources :comments
    end
   get 'tags/:tag', to: 'blocks#index', as: :tag
+  get 'reqs/:req', to: 'blocks#index', as: :req
 
 
 

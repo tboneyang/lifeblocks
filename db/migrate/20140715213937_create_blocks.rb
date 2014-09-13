@@ -3,6 +3,7 @@ class CreateBlocks < ActiveRecord::Migration
     create_table :blocks do |t|
       t.string :title
       t.text :text
+      t.integer :todo
 
       t.timestamps
     end

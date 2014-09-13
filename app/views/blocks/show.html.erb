@@ -1,25 +1,35 @@
-<!-- display title and text-->
-<span>
+<div id="extrapadded">
+<br>
+<div id="bigblock">
 
-		<strong>Title:</strong>
-		<%= @block.title %>
-
-
-		<strong>Text:</strong>
+		<h2 class="center" >
+			<%= @block.title %>
+		</h2>
+		<p>
+		Text:
 		<%= @block.text %>
-		
-		<strong>Tags:</strong>
+		</p>
+		<p id="tags">
+		Tags:
 		<%= @block.tag_list %>
+		</p>
+		<p id="reqs">
+		Reqs:
+		<%= @block.req_list %>
+		</p>
+		<p>
+		</p>
 
-</span>
+</div>
 
-<h2> Comments </h>
 <%= render @block.comments %>
 
-<h2>Add a Comment:</h2>
+<h2>Comment:</h2>
 <%= render "comments/form" %>
 		
 
 <%= link_to 'Back', blocks_path %> |
 <%= link_to 'Edit', edit_block_path(@block) %> |
 <%= link_to 'Delete', @block, :method => :delete, data: {confirm: 'You Sure Bro?'}  %>
+
+</div>

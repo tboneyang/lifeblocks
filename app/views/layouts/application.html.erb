@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-<div id="container">
 	<head>
-	  <title>LifeBlocks</title>
-	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-	  <%= csrf_meta_tags %>
+		  <title>RPI BucketList</title>
+		  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		  <%= csrf_meta_tags %>
+		  <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
 	</head>
+	
 	<body>
-		<%= render 'layouts/header' %>
-
-		<%= yield %>
+		<div id="wrapper">
+			<div id="header">
+				<%= render 'layouts/header' %>
+			</div>
+			<div id="content">
+				<%= yield %>
+			</div>
+			<div id="footer">
+				<%= render 'layouts/footer' %>
+			</div>
+		</div>
 	</body>
-	<div class="clearfooter"></div>
-</div>
-<div id= "footer">
-	<%= render 'layouts/footer' %>
-</div>
 </html>
