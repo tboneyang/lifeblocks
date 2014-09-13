@@ -70,7 +70,7 @@ class BlocksController < ApplicationController
 #defines strong block parameters so only appropriate data is passed
 	private
 		def block_params
-			params.require(:block).permit(:title, :text, :tag_list, :req_list, :todo)
+			params.require(:block).permit(:title, :text, :tag_list, :req_list, :todo,:image, :remote_image_url)
 		end
 
 end

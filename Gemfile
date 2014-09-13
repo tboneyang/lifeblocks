@@ -46,3 +46,8 @@ end
 
 #for tagging
 gem 'acts-as-taggable-on'
+
+gem "rmagick"
+gem "carrierwave"
+
+
